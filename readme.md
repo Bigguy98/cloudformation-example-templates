@@ -363,3 +363,15 @@ aws cloudformation create-change-set --change-set-name update-private-subnet-id\
   --use-previous-template \
   --parameters ParameterKey=paramPrivateSubnet2CIDR,ParameterValue="10.192.41.0/24"
 ```
+
+## Nested stack
+
+- Nested stacks are stacks created as part of other stacks. You create a nested stack within another stack by using the AWS::CloudFormation::Stack resource.
+Use this for sharing resources between templates.
+- With change sets for nested stacks you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you've confirmed that all the changes are as intended
+
+- Use the resource import feature to nest an existing stack within another existing stack with resource type AWS::CloudFormation::Stack
+
+
+## Stackset
+- AWS CloudFormation StackSets extends the capability of stacks by enabling you to create, update, or delete stacks across multiple accounts and AWS Regions with a single operation.
